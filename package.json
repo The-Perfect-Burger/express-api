@@ -1,0 +1,15 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "First Last <first.last@example.com>",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "node server.js",
+    "stop-all": "docker stop $(docker ps -a -q)",
+    "remove-all": "docker rm $(docker ps -a -q)"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
