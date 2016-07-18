@@ -18,7 +18,7 @@ integrations:
     - integrationName: "tpb-aws-iam"
       type: aws
       target: eb_paas
-      platform: "Node.js"
+      platform: "Single Container Docker"
       application_name: tpb-api-dev
       env_name: e-fdhxz2gbmy
       region: ap-southeast-2
