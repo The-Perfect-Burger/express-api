@@ -1,0 +1,24 @@
+# Language setting
+language: node_js
+
+build:
+  
+  pre_ci:
+    - echo "this is master branch"
+
+  ci:
+    - npm install
+
+  post_ci:
+    - ls -a
+    - pwd
+
+integrations:
+  deploy:
+    - integrationName: "tpb-aws-iam"
+      type: aws
+      target: eb_paas
+      platform: "Node.js"
+      application_name: tpb-api-dev
+      env_name: e-fdhxz2gbmy
+      region: ap-southeast-2
